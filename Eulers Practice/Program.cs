@@ -76,12 +76,12 @@ namespace Eulers_Practice
             //Problem 4
             //A palindromic number reads the same both ways. The largest palindrome made from the product of two 2 - digit numbers is 9009 = 91 × 99.
             //Find the largest palindrome made from the product of two 3 - digit numbers.
-
+            /*
             List<int> list = new List<int>();
 
             for(int i = 100; i < 1000; i++)
             {
-                for (int j = 100; j < 1000; j++)
+                for(int j = 100; j < 1000; j++)
                 {
                     int x = i * j;
                     string forward = x.ToString();
@@ -95,11 +95,46 @@ namespace Eulers_Practice
             var answer = list.Max();
             Console.WriteLine(answer);
             Console.ReadLine();
-
+            */
 
             //Problem 5
+            //2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+            //What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20 ?
+
+
+            /******* BRUTE FORCE TOOK A WHILE TO SOLVE ***********/
+            long answer = 0;
+            int p = 20;
+            long ticker = 2520;
+
+            while (ticker < 100000000000000)
+            {
+                if(superMod(ticker, p) == true)
+                {
+                    answer = ticker;
+                    break;
+                }
+                ticker = ticker + 2;
+            }
+
+            Console.WriteLine(answer);
+            Console.ReadLine();
 
         }
+        public static bool superMod(long value, int p)
+        {
+            int inc = 0;
+            for (int i = 1; i <= p; i++)
+            {
+                if (value % i == 0)
+                {
+                    inc++;
+                }
+            }
+            if (inc == p) return true;
+            return false;
+        }
+
         public static string reverseString(string s)
         {
             char[] arr = s.ToCharArray();
