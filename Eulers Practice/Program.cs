@@ -103,6 +103,7 @@ namespace Eulers_Practice
 
 
             /******* BRUTE FORCE TOOK A WHILE TO SOLVE ***********/
+            /*
             long answer = 0;
             int p = 20;
             long ticker = 2520;
@@ -119,7 +120,32 @@ namespace Eulers_Practice
 
             Console.WriteLine(answer);
             Console.ReadLine();
+            */
 
+            //Problem 6
+            //The sum of the squares of the first ten natural numbers is,
+            //12 + 22 + ... + 102 = 385
+            //The square of the sum of the first ten natural numbers is,
+            //(1 + 2 + ... + 10)2 = 552 = 3025
+            //Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
+            //Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+            int nat = 100;
+            int natsum = 0;
+            int natsum2 = 0;
+
+            for(int i = 1; i <= nat; i++)
+            {
+                natsum = natsum + (i * i);
+            }
+            for (int j = 1; j <= nat; j++)
+            {
+                natsum2 = natsum2 + j;
+            }
+            natsum2 = natsum2 * natsum2;
+            int answer = natsum2 - natsum;
+            Console.WriteLine(answer);
+            Console.ReadLine();
         }
         public static bool superMod(long value, int p)
         {
