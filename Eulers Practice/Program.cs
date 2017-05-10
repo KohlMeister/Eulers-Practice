@@ -15,19 +15,49 @@ namespace Eulers_Practice
             //By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
             //What is the 10 001st prime number?
             int answer = 0;
-            int prime = 4;
+            int prime = 10001;
+            int primeCount = 0;
             int i = 0;
-            while(i <= prime)
+            while(i <= 1000000000)
             {
-                for(int j = 1; j <= i; j++)
+                if(isPrime(i) == true)
                 {
-                    // In progress
+                    if(primeCount == prime)
+                    {
+                        break;
+                    }
+                    answer = i;
+                    primeCount = primeCount + 1;
                 }
                 i++;
             }
 
             Console.WriteLine(answer);
             Console.ReadLine();
+        }
+        public int problemSeven(int prime)
+        {
+            //Problem 7
+            //By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+            //What is the 10 001st prime number?
+
+            int answer = 0;
+            int primeCount = 0;
+            int i = 0;
+            while (i <= 1000000000)
+            {
+                if (isPrime(i) == true)
+                {
+                    if (primeCount == prime)
+                    {
+                        break;
+                    }
+                    answer = i;
+                    primeCount = primeCount + 1;
+                }
+                i++;
+            }
+            return answer;
         }
         public int problemOne(int range)
         {
@@ -183,7 +213,7 @@ namespace Eulers_Practice
             Array.Reverse(arr);
             return new string(arr);
         }
-        public bool isPrime(int value)
+        public static bool isPrime(int value)
         {
             if ((value == 1) || (value == 2)) return false;
             for (int i = 2; i < value; i++)
