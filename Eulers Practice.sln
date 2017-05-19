@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eulers Practice", "Eulers Practice\Eulers Practice.csproj", "{00570A68-89B5-4996-AAC7-AAC93C55247A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euler.Practice", "Eulers Practice\Euler.Practice.csproj", "{00570A68-89B5-4996-AAC7-AAC93C55247A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{CF1855E3-FB88-4815-AD2A-9B6752EEC842}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{00570A68-89B5-4996-AAC7-AAC93C55247A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00570A68-89B5-4996-AAC7-AAC93C55247A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00570A68-89B5-4996-AAC7-AAC93C55247A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1855E3-FB88-4815-AD2A-9B6752EEC842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1855E3-FB88-4815-AD2A-9B6752EEC842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1855E3-FB88-4815-AD2A-9B6752EEC842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1855E3-FB88-4815-AD2A-9B6752EEC842}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

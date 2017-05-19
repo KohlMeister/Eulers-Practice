@@ -7,33 +7,42 @@ using System.IO;
 
 namespace Eulers_Practice
 {
-    class Program
+    public class Problems
     {
         static void Main(string[] args)
         {
-            //Problem 7
-            //By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
-            //What is the 10 001st prime number?
-            int answer = 0;
-            int prime = 10001;
-            int primeCount = 0;
-            int i = 0;
-            while(i <= 1000000000)
-            {
-                if(isPrime(i) == true)
-                {
-                    if(primeCount == prime)
-                    {
-                        break;
-                    }
-                    answer = i;
-                    primeCount = primeCount + 1;
-                }
-                i++;
-            }
 
+            int answer = problemNine(35);        
             Console.WriteLine(answer);
             Console.ReadLine();
+        }
+        public static int problemNine(int target)
+        {
+            //Problem 9
+            //A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+            //a2 + b2 = c2
+            //For example, 32 + 42 = 9 + 16 = 25 = 52.
+            //There exists exactly one Pythagorean triplet for which a +b + c = 1000.
+            //Find the product abc.
+            //int answer = 0;
+            //int target = 1000;
+
+            for (int i = 1; i < 400; i++)
+            {
+                for (int j = i + 1; j < 400; j++)
+                {
+                    int product = (i * i) + (j * j);
+                    double root = Math.Sqrt(product);
+                    if (root % 1 == 0 && i + j + root == target)
+                    {
+                        int answer = i * j * Convert.ToInt32(root);
+                        return answer;
+                    }
+                }
+            }
+            return 0;
+            
+
         }
         public int problemSeven(int prime)
         {
@@ -59,7 +68,7 @@ namespace Eulers_Practice
             }
             return answer;
         }
-        public int problemOne(int range)
+        public static int problemOne(int range)
         {
             //Problem 1
             //If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.The sum of these multiples is 23.
