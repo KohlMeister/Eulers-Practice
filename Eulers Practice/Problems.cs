@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Collections;
 
 namespace Eulers_Practice
 {
@@ -11,10 +12,41 @@ namespace Eulers_Practice
     {
         static void Main(string[] args)
         {
+            new Problem10().PrimesSum();
+                       
+            //Console.WriteLine(answer);
+            //Console.ReadLine();
+        }
+        public static int[] ESieve(int upperLimit)
+        {
+            int sieveBound = (int)(upperLimit - 1) / 2;
+            int upperSqrt = ((int)Math.Sqrt(upperLimit) - 1) / 2;
 
-            int answer = problemNine(35);        
-            Console.WriteLine(answer);
-            Console.ReadLine();
+            BitArray PrimeBits = new BitArray(sieveBound + 1, true);
+
+            for (int i = 1; i <= upperSqrt; i++)
+            {
+                if (PrimeBits.Get(i))
+                {
+                    for (int j = i * 2 * (i + 1); j <= sieveBound; j += 2 * i + 1)
+                    {
+                        PrimeBits.Set(j, false);
+                    }
+                }
+            }
+
+            List<int> numbers = new List<int>((int)(upperLimit / (Math.Log(upperLimit) - 1.08366)));
+            numbers.Add(2);
+
+            for (int i = 1; i <= sieveBound; i++)
+            {
+                if (PrimeBits.Get(i))
+                {
+                    numbers.Add(2 * i + 1);
+                }
+            }
+
+            return numbers.ToArray();
         }
         public static int problemNine(int target)
         {
@@ -224,12 +256,27 @@ namespace Eulers_Practice
         }
         public static bool isPrime(int value)
         {
-            if ((value == 1) || (value == 2)) return false;
+            double root;
+            int f;
+            if (value == 1) return false;
+            else if (value < 4) return true;
+            else if (value % 2 == 0) return false;
+            else if (value < 9) return true;
+            else if (value % 3 == 0) return false;
+            else
+                root = Math.Round(Math.Sqrt(value));
+                f = 5;
+                while (f <= root)
+                    if (value % f == 0) return false;
+                    if (value % f + 2 == 0) return false;
+                    f = f + 6;
+                return true;
+            /*
             for (int i = 2; i < value; i++)
             {
                 if (value % i == 0) return false;
             }
-            return true;
+            return true;*/
         }
     }
 }
