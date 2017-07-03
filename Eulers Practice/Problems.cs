@@ -12,7 +12,9 @@ namespace Eulers_Practice
     {
         static void Main(string[] args)
         {
-            new Problem10().PrimesSum();
+            //new Problem10().PrimesSum();
+
+            new Problem_12().NatNums();
                        
             //Console.WriteLine(answer);
             //Console.ReadLine();

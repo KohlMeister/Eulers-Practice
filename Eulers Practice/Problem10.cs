@@ -9,10 +9,10 @@ namespace Eulers_Practice
 {
     class Problem10
     {
-        //Problem 10
-        //The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
-        //Find the sum of all the primes below two million.
-        //http://www.mathblog.dk/files/euler/Problem10.cs
+        // Problem 10
+        // The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+        // Find the sum of all the primes below two million.
+        // http://www.mathblog.dk/files/euler/Problem10.cs
 
         int value = 2000000;
                
