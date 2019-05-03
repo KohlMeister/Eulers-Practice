@@ -46,6 +46,8 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Problem 12.cs" />
     <Compile Include="Problem10.cs" />
+    <Compile Include="Problem21\Problem21Main.cs" />
+    <Compile Include="Problem22\Problem22Main.cs" />
     <Compile Include="Problems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections;
+using Eulers_Practice.Problem21;
+using Eulers_Practice.Problem22;
 
 namespace Eulers_Practice
 {
@@ -15,7 +17,7 @@ namespace Eulers_Practice
             //new Problem10().PrimesSum();
 
             //new Problem12().NatNums();
-            new Problem14().Collatz();
+            new Problem22Main().Run();
                        
             //Console.WriteLine(answer);
             //Console.ReadLine();
